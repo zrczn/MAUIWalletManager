@@ -1,0 +1,1 @@
+C:\Users\Patryk\source\repos\MAUIWalletManager\MauiTransaction\MauiTransaction.csproj;x64

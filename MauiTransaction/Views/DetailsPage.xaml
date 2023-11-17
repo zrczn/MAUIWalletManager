@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiTransaction.Views.DetailsPage"
+             Title="DetailsPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="35"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <VerticalStackLayout
+            Grid.ColumnSpan="2"
+            Grid.Row="0">
+            <Label
+                Text="Title"
+                FontSize="80"></Label>
+            <Label
+                x:Name="TitleLabel"
+                Text="Sample Text"
+                FontSize="60">
+            </Label>
+        </VerticalStackLayout>
+        <VerticalStackLayout
+            Grid.ColumnSpan="2"
+            Grid.Row="1">
+            <Label
+                Text="Value"
+                FontSize="80"></Label>
+            <Label
+                x:Name="ValueLabel"
+                Text="Sample Text"
+                FontSize="60">
+            </Label>
+        </VerticalStackLayout>
+        <VerticalStackLayout
+            Grid.Column="0"
+            Grid.Row="2">
+            <Label
+                Text="Date"
+                FontSize="80"></Label>
+            <Label
+                x:Name="DateLabel"
+                Text="Sample Text"
+                FontSize="60">
+            </Label>
+        </VerticalStackLayout>
+        <VerticalStackLayout
+            Grid.Column="1"
+            Grid.Row="2">
+            <Label
+                Text="Category"
+                FontSize="80"></Label>
+            <Label
+                x:Name="CategoryLabel"
+                Text="Sample Text"
+                FontSize="60">
+            </Label>
+        </VerticalStackLayout>
+        <Button
+            Grid.ColumnSpan="2"
+            Grid.Row="3"
+            Text="Cancel"
+            Margin="0,0,0,5"
+            Clicked="Button_Clicked">
+        </Button>
+    </Grid>
+</ContentPage>

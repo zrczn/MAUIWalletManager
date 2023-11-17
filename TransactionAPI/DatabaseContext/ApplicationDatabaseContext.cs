@@ -14,6 +14,12 @@ namespace TransactionAPI.DatabaseContext
             
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Category>().ToTable("Categories");
+        }
+
         public DbSet<Transaction> Transactions { get; set; }
         public DbSet<Category> Categories { get; set; }
     }

@@ -24,16 +24,19 @@ namespace TransactionAPI.Migrations
 
             modelBuilder.Entity("TransactionAPI.Models.Category", b =>
                 {
-                    b.Property<int>("categoryId")
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<string>("Type")
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("categoryId");
+                    b.HasKey("Id");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Categories", (string)null);
                 });
 
             modelBuilder.Entity("TransactionAPI.Models.Transaction", b =>
@@ -67,17 +70,12 @@ namespace TransactionAPI.Migrations
             modelBuilder.Entity("TransactionAPI.Models.Transaction", b =>
                 {
                     b.HasOne("TransactionAPI.Models.Category", "Category")
-                        .WithMany("Transactions")
+                        .WithMany()
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Category");
-                });
-
-            modelBuilder.Entity("TransactionAPI.Models.Category", b =>
-                {
-                    b.Navigation("Transactions");
                 });
 #pragma warning restore 612, 618
         }

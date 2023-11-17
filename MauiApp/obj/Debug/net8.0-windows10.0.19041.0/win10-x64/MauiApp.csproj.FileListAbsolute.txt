@@ -1,0 +1,12 @@
+C:\Users\Patryk\source\repos\MAUIWalletManager\MauiApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\MauiApp.csproj.AssemblyReference.cache
+C:\Users\Patryk\source\repos\MAUIWalletManager\MauiApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\mauiimage.inputs
+C:\Users\Patryk\source\repos\MAUIWalletManager\MauiApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\mauifont.inputs
+C:\Users\Patryk\source\repos\MAUIWalletManager\MauiApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\mauisplash.inputs
+C:\Users\Patryk\source\repos\MAUIWalletManager\MauiApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\mauimanifest.stamp
+C:\Users\Patryk\source\repos\MAUIWalletManager\MauiApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.g.i.cs
+C:\Users\Patryk\source\repos\MAUIWalletManager\MauiApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.g.cs
+C:\Users\Patryk\source\repos\MAUIWalletManager\MauiApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\XamlTypeInfo.g.cs
+C:\Users\Patryk\source\repos\MAUIWalletManager\MauiApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.xaml
+C:\Users\Patryk\source\repos\MAUIWalletManager\MauiApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.xbf
+C:\Users\Patryk\source\repos\MAUIWalletManager\MauiApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\XamlSaveStateFile.xml
+C:\Users\Patryk\source\repos\MAUIWalletManager\MauiApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\MauiApp.GeneratedMSBuildEditorConfig.editorconfig

@@ -1,4 +1,5 @@
 
+using Microsoft.EntityFrameworkCore;
 using TransactionAPI.DatabaseContext;
 using TransactionAPI.Models.Repository;
 
@@ -17,8 +18,16 @@ namespace TransactionAPI
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            builder.Services.AddSqlServer<ApplicationDatabaseContext>(
-                builder.Configuration.GetConnectionString("DefConn"));
+            builder.Services.AddDbContext<ApplicationDatabaseContext>(
+                opt =>
+                {
+                    string connString = builder.Configuration.GetConnectionString("DefConn");
+
+                    opt.UseSqlServer(connString, sqlServerOptionsAction: sqlopt =>
+                    {
+                        sqlopt.EnableRetryOnFailure(maxRetryCount: 5, maxRetryDelay: TimeSpan.FromSeconds(30), errorNumbersToAdd: null);
+                    });
+                });
 
             builder.Services.AddTransient<ITransactionRepository, TransactionRepository>();
 
@@ -29,6 +38,10 @@ namespace TransactionAPI
             {
                 app.UseSwagger();
                 app.UseSwaggerUI();
+            }
+            else
+            {
+                app.UseHttpsRedirection();
             }
 
             app.UseHttpsRedirection();

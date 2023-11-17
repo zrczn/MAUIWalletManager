@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Reflection.PortableExecutable;
 
 namespace TransactionAPI.Models
 {
@@ -7,31 +8,15 @@ namespace TransactionAPI.Models
     {
         [Key]
         public int Id { get; set; }
+        [Required]
         public string Title { get; set; }
 
-        public CategoryId CategoryId { get; set; }
+        public int CategoryId { get; set; }
         public Category Category { get; set; }
 
-
+        [Required]
         public Decimal Value { get; set; }
         public DateTime Date { get; set; }
 
     }
-
-    public class Category
-    {
-        public CategoryId categoryId { get; set; }
-        public string Type { get; set; }
-
-        public ICollection<Transaction> Transactions { get; set; }
-    }
-
-
-    public enum CategoryId
-    {
-        Ohters,
-        Food,
-        Transport,
-    }
-
 }

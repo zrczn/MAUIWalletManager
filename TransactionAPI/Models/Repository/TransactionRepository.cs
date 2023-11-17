@@ -13,27 +13,49 @@ namespace TransactionAPI.Models.Repository
             _DbCon = Dbcon;
         }
 
-        
-        public async Task<bool> AddTransactionAsync(Transaction transaction)
+        public async Task<IEnumerable<Category>> GetCategoriesAsync()
         {
-            var getObjId = await _DbCon.Transactions.FirstOrDefaultAsync(
-                x => x.Id == transaction.Id);
+            var getObjs = await _DbCon.Categories.Select(x => x).ToListAsync();
 
-            if (getObjId != null)
-                return false;
+            if (getObjs == null)
+                return null;
+
+            return getObjs;
+        }
+
+        public async Task<bool> SaveTransactionAsync(int id, Transaction transaction)
+        {
+            var existingTransaction = await _DbCon.Transactions.FirstOrDefaultAsync(x => x.Id == id);
+
+            if (existingTransaction != null)
+            {
+                existingTransaction.Title = transaction.Title;
+                existingTransaction.Date = transaction.Date;
+                existingTransaction.Value = transaction.Value;
+                existingTransaction.CategoryId = transaction.CategoryId;
+            }
+            else
+            {
+                var newTransaction = new Transaction
+                {
+                    Title = transaction.Title,
+                    Date = transaction.Date,
+                    Value = transaction.Value,
+                    CategoryId = transaction.CategoryId
+                };
+
+                await _DbCon.Transactions.AddAsync(newTransaction);
+            }
 
             try
             {
-                _DbCon.Transactions.Add(transaction);
                 await _DbCon.SaveChangesAsync();
+                return true;
             }
             catch
             {
                 return false;
             }
-
-            return true;
-
         }
 
         public async Task<bool> DeleteTransactionAsync(int id)
@@ -54,40 +76,40 @@ namespace TransactionAPI.Models.Repository
             return true;
         }
 
-        public async Task<bool> EditTransactionAsync(int id, Transaction transaction)
-        {
-            var getObj = _DbCon.Transactions.FirstOrDefault(
-                x => x.Id == id);
-
-            if (getObj == null)
-                return false;
-
-            try
-            {
-                _DbCon.Transactions.Update(getObj);
-                await _DbCon.SaveChangesAsync();
-            }
-            catch { return false; }
-
-            return true;
-            
-
-        }
-
-        public async Task<Transaction> GetTransactionAsync(int id)
+        public async Task<TransactionDTO> GetTransactionAsync(int id)
         {
             var getObj = await _DbCon.Transactions.FirstOrDefaultAsync(x => x.Id == id);
 
-            if(getObj == null)
+            if (getObj == null)
                 return null;
 
-            return getObj;
-                
+            var getCategoryName = await _DbCon.Categories.FirstOrDefaultAsync(x => x.Id == getObj.CategoryId);
+
+            TransactionDTO transactionDTO = new TransactionDTO()
+            {
+                Id = getObj.Id,
+                CategoryName = getCategoryName.Name,
+                Date = getObj.Date,
+                Title = getObj.Title,
+                Value = getObj.Value
+            };
+
+            return transactionDTO;
+
         }
 
-        public async Task<IEnumerable<Transaction>> GetTransactionsAsync()
+        public async Task<IEnumerable<TransactionDTO>> GetTransactionsAsync()
         {
-            var getObjs = _DbCon.Transactions.Select(x => x);
+            var getObjs = await _DbCon.Transactions
+                .Include(q => q.Category)
+                .Select(x => new TransactionDTO()
+                {
+                    Id = x.Id,
+                    Date = x.Date,
+                    Title = x.Title,
+                    Value = x.Value,
+                    CategoryName = x.Category.Name
+                }).ToListAsync();
 
             return getObjs;
         }

@@ -55,30 +55,31 @@ namespace TransactionAPI.Controllers
             return BadRequest();
         }
 
-        [HttpPost]
+        [HttpPost("{id}")]
         [ProducesResponseType(204)]
         [ProducesResponseType(200)]
-        public async Task<IActionResult> CreateTransaction([FromBody] Transaction transaction)
+        public async Task<IActionResult> SaveTransaction(int id, [FromBody] Transaction transaction)
         {
-            bool tryToCreateTransaction
-                = await _transactionRepository.AddTransactionAsync(transaction);
+            var tryToSave = await _transactionRepository.SaveTransactionAsync(id, transaction);
 
-            if (tryToCreateTransaction)
+            if (tryToSave)
                 return Ok();
 
             return BadRequest();
+
         }
 
-        [HttpPut("{id}")]
+        [HttpGet("/categories")]
         [ProducesResponseType(204)]
         [ProducesResponseType(200)]
-        public async Task<IActionResult> UpdateTransaction(int id, [FromBody] Transaction transaction)
+        public async Task<ActionResult<IEnumerable<string>>> GetCategories()
         {
-            bool tryToGetTransaction = await _transactionRepository.EditTransactionAsync(id, transaction);
+            var getObjs = await _transactionRepository.GetCategoriesAsync();
 
-            if(tryToGetTransaction)
-                return Ok();
-            return BadRequest();
+            if (getObjs.Count() <= 0)
+                return BadRequest();
+
+            return Ok(getObjs);
         }
 
     }
