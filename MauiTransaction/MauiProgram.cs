@@ -21,7 +21,7 @@ namespace MauiTransaction
             builder.Services.AddTransient<IHttpCli, HttpCli>();
             builder.Services.AddTransient<ICRUDService, CRUDService>();
             builder.Services.AddTransient<MainMenu>();
-            builder.Services.AddTransient<NewTransaction>();
+            builder.Services.AddTransient<EditTransaction>();
             builder.Services.AddTransient<DetailsPage>();
 
 #if DEBUG

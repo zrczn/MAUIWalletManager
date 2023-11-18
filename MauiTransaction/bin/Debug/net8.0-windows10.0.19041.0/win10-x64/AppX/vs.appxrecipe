@@ -30,25 +30,25 @@
     <AppXManifest Include="C:\Users\Patryk\source\repos\MAUIWalletManager\MauiTransaction\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-11-17T19:44:31.053</Modified>
+      <Modified>2023-11-18T15:03:32.544</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Patryk\source\repos\MAUIWalletManager\MauiTransaction\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-11-17T19:44:30.971</Modified>
+      <Modified>2023-11-18T14:58:10.749</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Patryk\source\repos\MAUIWalletManager\MauiTransaction\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\MauiTransaction.runtimeconfig.json">
       <PackagePath>MauiTransaction.runtimeconfig.json</PackagePath>
-      <Modified>2023-11-16T20:44:37.678</Modified>
+      <Modified>2023-11-18T11:41:40.134</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Patryk\source\repos\MAUIWalletManager\MauiTransaction\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\MauiTransaction.dll">
       <PackagePath>MauiTransaction.dll</PackagePath>
-      <Modified>2023-11-17T19:44:30.785</Modified>
+      <Modified>2023-11-18T15:03:32.275</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Patryk\source\repos\MAUIWalletManager\MauiTransaction\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>MauiTransaction.exe</PackagePath>
-      <Modified>2023-11-17T19:44:30.788</Modified>
+      <Modified>2023-11-18T15:03:32.278</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Patryk\source\repos\MAUIWalletManager\MauiTransaction\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -266,29 +266,37 @@
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
       <Modified>2023-11-16T17:29:08.762</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Patryk\source\repos\MAUIWalletManager\MauiTransaction\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\arrow_down.scale-100.png">
+      <PackagePath>arrow_down.scale-100.png</PackagePath>
+      <Modified>2023-11-18T13:56:06.278</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Patryk\source\repos\MAUIWalletManager\MauiTransaction\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\arrow_up.scale-100.png">
+      <PackagePath>arrow_up.scale-100.png</PackagePath>
+      <Modified>2023-11-18T13:55:37.164</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Patryk\source\repos\MAUIWalletManager\MauiTransaction\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2023-11-16T17:29:08.447</Modified>
+      <Modified>2023-11-18T13:56:36.058</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Patryk\source\repos\MAUIWalletManager\MauiTransaction\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2023-11-16T17:29:08.455</Modified>
+      <Modified>2023-11-18T13:56:36.066</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Patryk\source\repos\MAUIWalletManager\MauiTransaction\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2023-11-16T17:29:08.464</Modified>
+      <Modified>2023-11-18T13:56:36.076</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Patryk\source\repos\MAUIWalletManager\MauiTransaction\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2023-11-16T17:29:08.478</Modified>
+      <Modified>2023-11-18T13:56:36.089</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Patryk\source\repos\MAUIWalletManager\MauiTransaction\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2023-11-16T17:29:08.529</Modified>
+      <Modified>2023-11-18T13:56:36.132</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Patryk\source\repos\MAUIWalletManager\MauiTransaction\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\MauiTransaction.deps.json">
       <PackagePath>MauiTransaction.deps.json</PackagePath>
-      <Modified>2023-11-17T18:27:48.324</Modified>
+      <Modified>2023-11-18T14:58:10.582</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Patryk\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.31\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>

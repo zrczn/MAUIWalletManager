@@ -17,5 +17,9 @@ namespace MauiTransaction.Data
         Task<bool> SaveTransactionAsync(int id, Transaction transaction);
         Task<IEnumerable<Category>> GetCategoriesAsync();
 
+        Task<decimal> GetTotal(int mode);
+        Task<bool> DeleteTransactionAsync(int id);
+
+
     }
 }

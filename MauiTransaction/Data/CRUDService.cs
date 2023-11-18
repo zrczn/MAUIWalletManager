@@ -2,6 +2,7 @@
 using MauiTransaction.Models;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,26 @@ namespace MauiTransaction.Data
             _cli = httpCli._cli;
             _jsonSerializerOptions = httpCli._jsonSerializerOptions;
         }
+
+        public async Task<bool> DeleteTransactionAsync(int id)
+        {
+            Uri uri = new Uri(string.Format($"https://localhost:7044/Transaction/{id}"));
+
+            try
+            {
+                HttpResponseMessage response = await _cli.DeleteAsync(uri);
+                if (response.IsSuccessStatusCode)
+                    return true;
+            }
+            catch(Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+                return false;
+            }
+
+            return false;
+        }
+
         public async Task<IEnumerable<Category>> GetCategoriesAsync()
         {
 
@@ -47,6 +68,36 @@ namespace MauiTransaction.Data
             }
 
             return categories;
+        }
+
+        public async Task<decimal> GetTotal(int mode)
+        {
+            decimal value = default;
+            Uri uri;
+
+            switch (mode)
+            {
+                case 1:
+                    uri = new Uri(string.Format("https://localhost:7044/moneyincome"));
+                    break;
+                case 2:
+                    uri = new Uri(string.Format("https://localhost:7044/moneyoutcome"));
+                    break;
+
+                default:
+                    uri = new Uri(string.Format("https://localhost:7044/money"));
+                    break;
+            }
+
+            HttpResponseMessage response = await _cli.GetAsync(uri);
+
+            if (response.IsSuccessStatusCode)
+            {
+                string content = await response.Content.ReadAsStringAsync();
+                value = JsonSerializer.Deserialize<decimal>(content, _jsonSerializerOptions);
+            }
+
+            return value;
         }
 
         public async Task<TransactionDTO> GetTransactionAsync(int id)

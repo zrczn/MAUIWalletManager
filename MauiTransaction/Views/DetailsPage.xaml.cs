@@ -2,6 +2,7 @@ using System.Diagnostics;
 using System.Transactions;
 using MauiTransaction.Data;
 using MauiTransaction.Models;
+//using Windows.ApplicationModel.Activation;
 
 namespace MauiTransaction.Views;
 
@@ -42,8 +43,24 @@ public partial class DetailsPage : ContentPage
 		}
 	}
 
-    private void Button_Clicked(object sender, EventArgs e)
+    private async void Button_Clicked(object sender, EventArgs e)
     {
-		Shell.Current.GoToAsync("..");
+        await Shell.Current.GoToAsync($"//{nameof(MainMenu)}");
+    }
+
+    private async void Button_Cliced_Delete(object sender, EventArgs e)
+    {
+		bool ans = await DisplayAlert("Warning","You are about to delete choosen Transaction\nAre you sure?", "Yes", "No");
+
+		if (ans)
+		{
+			await _crudService.DeleteTransactionAsync(_transaction.Id);
+			await Shell.Current.GoToAsync("..");
+		}
+    }
+
+    private async void Button_Clicked_Edit(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync($"{nameof(EditTransaction)}?Id={_transaction.Id}");
     }
 }

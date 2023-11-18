@@ -19,9 +19,10 @@
                  FontSize="Large">
             </Label>
             <Label
+                x:Name="TotalLabel"
                 FontSize="50"
                 HorizontalOptions="EndAndExpand"
-                Text="1000 units">
+                Text="Sample Text">
             </Label>
         </VerticalStackLayout>
         <ListView
@@ -29,7 +30,8 @@
             BackgroundColor="Transparent"
             x:Name="ListOfTransactions"
             ItemSelected="ListOfTransactions_ItemSelected"
-            ItemTapped="ListOfTransactions_ItemTapped">
+            ItemTapped="ListOfTransactions_ItemTapped"
+            SelectionMode="Single">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -42,8 +44,10 @@
                                 <ColumnDefinition Width="Auto"/>
                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
-                            <Image Grid.RowSpan="2"
-                                   Source="dotnet_bot.png"
+                            <Image 
+                                   x:Name="Image"
+                                   Grid.RowSpan="2"
+                                   Source="{Binding Image}"
                                    Aspect="AspectFill"
                                    HeightRequest="60"
                                    WidthRequest="60"/>
@@ -83,15 +87,17 @@
                     Text="Total Outcome">
                 </Label>
                 <Label
+                    x:Name="IncomeLabel"
                     TextColor="Green"
                     Grid.Row="1"
-                    Text="10 000 Units">
+                    Text="Sample Text">
                 </Label>
                 <Label
+                    x:Name="OutcomeLabel"
                     TextColor="Red"
                     Grid.Column="1"
                     Grid.Row="1"
-                    Text="-500 Units">
+                    Text="Sample Text">
                 </Label>
             </Grid>
             <Button

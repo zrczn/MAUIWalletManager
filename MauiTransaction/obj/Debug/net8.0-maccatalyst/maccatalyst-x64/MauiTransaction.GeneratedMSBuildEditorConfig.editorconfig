@@ -46,14 +46,14 @@ build_metadata.AdditionalFiles.ManifestResourceName = MauiTransaction.Views.Deta
 build_metadata.AdditionalFiles.TargetPath = Views\DetailsPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\DetailsPage.xaml
 
+[C:/Users/Patryk/source/repos/MAUIWalletManager/MauiTransaction/Views/EditTransaction.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiTransaction.Views.EditTransaction.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\EditTransaction.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\EditTransaction.xaml
+
 [C:/Users/Patryk/source/repos/MAUIWalletManager/MauiTransaction/Views/MainMenu.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MauiTransaction.Views.MainMenu.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\MainMenu.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\MainMenu.xaml
-
-[C:/Users/Patryk/source/repos/MAUIWalletManager/MauiTransaction/Views/NewTransaction.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = MauiTransaction.Views.NewTransaction.xaml
-build_metadata.AdditionalFiles.TargetPath = Views\NewTransaction.xaml
-build_metadata.AdditionalFiles.RelativePath = Views\NewTransaction.xaml

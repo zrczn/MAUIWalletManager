@@ -8,5 +8,9 @@
         Task<bool> SaveTransactionAsync(int id, Transaction transaction);
         Task<IEnumerable<Category>> GetCategoriesAsync();
 
+        Task<decimal> GetTotalMoneyAsync();
+        Task<decimal> GetTotalIncome();
+        Task<decimal> GetTotalOutcome();
+
     }
 }

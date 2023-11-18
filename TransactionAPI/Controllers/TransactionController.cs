@@ -82,5 +82,32 @@ namespace TransactionAPI.Controllers
             return Ok(getObjs);
         }
 
+        [HttpGet("/money")]
+        [ProducesResponseType(200)]
+        public async Task<decimal> GetMoney()
+        {
+            var calc = await _transactionRepository.GetTotalMoneyAsync();
+
+            return calc;
+        }
+
+        [HttpGet("/moneyincome")]
+        [ProducesResponseType(200)]
+        public async Task<decimal> GetMoneyIncomeAsync()
+        {
+            var calc = await _transactionRepository.GetTotalIncome();
+
+            return calc;
+        }
+
+        [HttpGet("/moneyoutcome")]
+        [ProducesResponseType(200)]
+        public async Task<decimal> GetMoneyOutcomeAsync()
+        {
+            var calc = await _transactionRepository.GetTotalOutcome();
+
+            return calc;
+        }
+
     }
 }

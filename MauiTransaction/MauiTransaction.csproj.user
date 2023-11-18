@@ -14,10 +14,10 @@
     <MauiXaml Update="Views\DetailsPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="Views\MainMenu.xaml">
+    <MauiXaml Update="Views\EditTransaction.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="Views\NewTransaction.xaml">
+    <MauiXaml Update="Views\MainMenu.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
   </ItemGroup>

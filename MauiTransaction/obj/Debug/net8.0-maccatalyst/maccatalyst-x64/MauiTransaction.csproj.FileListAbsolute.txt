@@ -299,3 +299,5 @@ C:\Users\Patryk\source\repos\MAUIWalletManager\MauiTransaction\obj\Debug\net8.0-
 C:\Users\Patryk\source\repos\MAUIWalletManager\MauiTransaction\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\MauiTransaction.pdb
 C:\Users\Patryk\source\repos\MAUIWalletManager\MauiTransaction\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\MauiTransaction.genruntimeconfig.cache
 C:\Users\Patryk\source\repos\MAUIWalletManager\MauiTransaction\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\ref\MauiTransaction.dll
+C:\Users\Patryk\source\repos\MAUIWalletManager\MauiTransaction\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\arrow_up.png
+C:\Users\Patryk\source\repos\MAUIWalletManager\MauiTransaction\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\Resources\arrow_down.png

@@ -113,5 +113,14 @@ namespace TransactionAPI.Models.Repository
 
             return getObjs;
         }
+
+        public async Task<decimal> GetTotalMoneyAsync()
+            => await _DbCon.Transactions.SumAsync(x => x.Value);
+
+        public async Task<decimal> GetTotalIncome()
+            => await _DbCon.Transactions.Select(x => x.Value).Where(y => y > 0).SumAsync(z => z);
+
+        public async Task<decimal> GetTotalOutcome()
+            => await _DbCon.Transactions.Select(x => x.Value).Where(y => y < 0).SumAsync(z => z);
     }
 }

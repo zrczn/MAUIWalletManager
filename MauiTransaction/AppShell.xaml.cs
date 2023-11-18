@@ -10,7 +10,7 @@ namespace MauiTransaction
             InitializeComponent();
 
             Routing.RegisterRoute(nameof(MainMenu), typeof(MainMenu));
-            Routing.RegisterRoute(nameof(NewTransaction), typeof(NewTransaction));
+            Routing.RegisterRoute(nameof(EditTransaction), typeof(EditTransaction));
             Routing.RegisterRoute(nameof(DetailsPage), typeof(DetailsPage));
         }
     }
